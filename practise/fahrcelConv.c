@@ -15,7 +15,7 @@ int main()
 {
   float C, result;
 
-  printf("Enter th celcius value to convert => ");
+  printf("Enter the celcius value to convert => ");
   scanf("%f", &C);
 
   result = celConverter(C);

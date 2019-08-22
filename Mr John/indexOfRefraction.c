@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
+// #include <math.h>
 #include <tgmath.h>
 
 
@@ -14,7 +14,7 @@ int main(void) {
   const double PI = 3.14159;
 
   // tetha for incidence and refractive angle
-  double t1 = 0, t2 = 0;
+  float t1, t2;
 
   // refractive index of glass
   double n = 0;
@@ -28,20 +28,20 @@ int main(void) {
 
   printf("==================================================================\n");
   printf("Enter the angle of incidence in degrees: ");
-  scanf("%lf\n", &t1);
+  scanf("%f\n", &t1);
 
   printf("==================================================================\n");
   printf("Enter the angle of refraction in degrees: ");
-  scanf("%lf\n", &t2);
+  scanf("%f\n", &t2);
 
   printf("==================================================================\n");
   printf("The angles entered are %f and %f in degrees, incidence and refractive respectively\n", t1, t2);
 
   // convert from degrees to radians
-  // t1 = t1 * (PI/180);
-  // t2 = t2 * (PI/180);
+  t1 = t1 * (PI/180);
+  t2 = t2 * (PI/180);
 
-  // n = vacRef * (sin(t1) / sin(t2));
+  n = vacRef * (sin(t1) / sin(t2));
 
-  // printf("The refractive index of glass relative to vacuum is %lf", n);
+  printf("The refractive index of glass relative to vacuum is %lf\n", n);
 }

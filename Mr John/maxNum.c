@@ -23,10 +23,10 @@ void getMaxNum(int *array) {
   qsort(array, 4, sizeof(int), compare_ints);
 
   for (int i = 0; i < 4 /*arrSize*/; i++) {
-    printf("%d\n", array[i]);
+    printf("%d,", array[i]);
   }
 
-  printf("Maximum number is %d\n", array[4 - 1]);
+  printf("\nMaximum number is %d\n", array[4 - 1]);
   
 }
 
@@ -42,7 +42,7 @@ int main(void) {
   // scanf("%d", &dim);
 
   // print dimension entered - optional
-  printf("The dimension entered is: %d\n", dim);
+  printf("The maximum dimension is %d\n", dim);
 
   // declare array with the dimension entered
   // int *arr = malloc(dim * sizeof(int));
